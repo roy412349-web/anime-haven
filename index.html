@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Anime Haven — discover anime through official, free-to-watch sources." />
+    <title>Anime Haven — Watch anime, legally</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>.poster{background-size:cover;background-position:center}.catalog-status{color:var(--muted);font-size:13px;margin:10px 0}</style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Anime Haven home"><span class="brand-mark">A</span>anime<span>haven</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#browse">Browse</a><a href="#schedule">Schedule</a><a href="#community">Community</a>
+      </nav>
+      <div class="header-actions"><button class="icon-button" id="themeButton" aria-label="Toggle theme">◐</button><button class="profile">M</button></div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Your next favorite is waiting</p>
+          <h1>Stories that stay<br /><em>with you.</em></h1>
+          <p class="hero-text">A calmer way to find anime. Search a live catalog, then explore legitimate places to watch in your region.</p>
+          <div class="hero-buttons"><a class="button primary" href="#browse">Explore titles <span>→</span></a><button class="button text-button" id="howItWorks">How it works <span>↗</span></button></div>
+          <div class="hero-stats"><div><strong id="catalogCount">Live</strong><span>anime catalog</span></div><div><strong>100%</strong><span>official watch search</span></div></div>
+        </div>
+        <div class="hero-art" aria-label="Featured anime artwork illustration">
+          <div class="sun"></div><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div><div class="mountain mountain-back"></div><div class="mountain mountain-front"></div>
+          <div class="featured-card"><div class="card-image"><div class="character"><i></i><b></b></div></div><div class="featured-meta"><span>FEATURED THIS WEEK</span><h2>Skybound<br />Letters</h2><p>Drama · Fantasy · 24 min</p><button class="round-play" aria-label="Preview Skybound Letters">▶</button></div></div>
+          <p class="art-credit">Original art for Anime Haven</p>
+        </div>
+      </section>
+
+      <section class="discover" id="browse">
+        <div class="section-heading"><div><p class="eyebrow">Find your mood</p><h2>Made for tonight.</h2></div><button class="all-link" id="showAll">View all <span>→</span></button></div>
+        <div class="search-row"><label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Search real anime titles" /></label><div class="filters" id="filters"><button class="active" data-filter="all">All</button><button data-filter="1">Action</button><button data-filter="10">Fantasy</button><button data-filter="36">Slice of life</button><button data-filter="22">Romance</button></div></div>
+        <div class="anime-grid" id="animeGrid"></div>
+        <p class="empty" id="emptyState" hidden>No titles match that search. Try a different mood.</p><p class="catalog-status" id="catalogStatus" aria-live="polite">Loading the live catalog…</p>
+      </section>
+
+      <section class="schedule" id="schedule">
+        <div><p class="eyebrow">Fresh episodes</p><h2>Coming this week.</h2></div><div class="schedule-list" id="scheduleList"><p class="catalog-status">Loading this week’s schedule…</p></div>
+      </section>
+
+      <section class="legal-note" id="community"><span>✦</span><div><strong>Always official. Always simple.</strong><p>Anime Haven uses live catalog data for discovery and sends you to official availability search. Availability and free ad-supported options vary by region.</p></div><a href="https://www.justwatch.com/" target="_blank" rel="noreferrer">Find a service ↗</a></section>
+    </main>
+    <footer><a class="brand" href="#top"><span class="brand-mark">A</span>anime<span>haven</span></a><p>Discover more, watch responsibly.</p><p>© 2026 Anime Haven</p></footer>
+    <dialog id="modal"><button class="modal-close" aria-label="Close">×</button><p class="eyebrow">How Anime Haven works</p><h2>Discover first.<br />Watch officially.</h2><p>Browse the catalog, choose a title, and follow verified links to official services. Some services offer free, ad-supported episodes depending on your location.</p><a class="button primary" href="#browse">Start browsing →</a></dialog>
+    <div class="toast" id="toast" role="status"></div><script src="app.js"></script>
+  </body>
+</html>
+
